@@ -7,8 +7,7 @@
     tools:context="com.example.td.MainActivity">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
@@ -186,13 +185,17 @@
                 android:layout_marginTop="5dp"
                 android:background="#706E6E"/>
         </LinearLayout>
+
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="310dp"
-        android:layout_marginTop="350dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="300dp"
         android:orientation="vertical"
-        android:background="#DDBDBEBD">
+        android:background="#DDBDBEBD"
+        android:id="@+id/lin2"
+        android:visibility="gone">
         <ImageView
             android:src="@drawable/ic"
             android:layout_width="100dp"
@@ -212,9 +215,9 @@
             android:layout_height="wrap_content"
             android:text="Created By Tanesh
                                 Email tanesh9532@gamil.com"
-        android:layout_marginLeft="50dp"
-        android:textStyle="italic"
-        android:textColor="#0A0A0A"
+            android:layout_marginLeft="50dp"
+            android:textStyle="italic"
+            android:textColor="#0A0A0A"
             android:textSize="20sp"/>
         <TextView
             android:layout_width="wrap_content"

@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private long backtime;
+    private LinearLayout l1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if((backtime+2000)>System.currentTimeMillis()){super.onBackPressed(); return;}
+        if((backtime+1000)>System.currentTimeMillis()){l1=(LinearLayout)findViewById(R.id.lin2);l1.setVisibility(View.VISIBLE);}
+        else if((backtime+2000)>System.currentTimeMillis()){l1=(LinearLayout)findViewById(R.id.lin2);l1.setVisibility(View.GONE);}
+        else if((backtime+3000)>System.currentTimeMillis()){super.onBackPressed(); return;}
         else{Toast t=Toast.makeText(this,"Press again to exit",Toast.LENGTH_SHORT); t.show();}
         backtime=System.currentTimeMillis();
     }
